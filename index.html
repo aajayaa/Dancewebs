@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #nav{
+            display: none;
+        } */
+
+        #container{
+            max-width: 500px;
+            margin: auto;
+            border: 2px solid black;
+            margin-top: 100px;
+        }
+        h1{
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2em;
+        }
+        h3{
+            /* margin-left: 150px; */
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            padding: 0 3px;
+        }
+        #sub-container{
+            display: flex;
+            flex-direction: column;
+            margin-left: 155px;
+        }
+        button{
+            width: 150px;
+            margin: 15px;
+            padding: 10px 23px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>counter</h1>
+        <h3 id="newcount">0</h3>
+        <div id="sub-container">
+            <button onclick="inc()">Increment</button>
+        <button onclick="dec()">Decrement</button>
+        <button id="save-btn" onclick="save()">Save</button>
+        </div>
+        
+        <p id="saveCount">Counter : </p>
+    </div>
+    
+    
+
+    <div>
+        <button onclick="ham()">hamburger</button>
+        <ul id="nav">
+            <li>home</li>
+            <li>service</li>
+            <li>contact</li>
+        </ul>
+    </div>
+    <button onclick="add3Points()">Add</button>
+    <button onclick="remove1Points()">Subtract</button>
+    <p id="calc">0</p>
+
+    <button onclick="nav()" >X</button>
+    <ul id="menu" >
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+        <li>Services</li>
+    </ul>
+    
+    <script>
+        let count =0
+        let countEl = document.getElementById("newcount");
+        function inc(){
+            count=count+1
+            document.getElementById("newcount").innerText=count
+ 
+        }
+
+        function dec(){
+            if (count!=0){
+                count=count-1
+            document.getElementById("newcount").innerText=count
+            }
+            
+ 
+        }
+        function reset(){
+           count=0
+            document.getElementbyId("newcount").innerText=0
+            
+        }
+        function nav(){
+            let x = document.getElementById('menu');
+            if(x.style.display === "none"){
+                x.style.display = "block"
+            
+            }else{
+                x.style.display = "none"
+            }
+        }
+        function ham(){
+            var x= document.getElementById("nav");
+            if(x.style.display==="block"){
+                x.style.display="none";
+            }
+            else{
+                x.style.display="block";
+            }
+        
+        function save(){
+            let saveCount = document.getElementById("saveCount");
+            let countStr = count + " - ";
+            saveCount.innerHTML += countStr;
+            count = 0;
+            countEl.innerHTML= 0;
+        }
+        let firstName = "Rahul"
+        let lastName = "Shrestha"
+        let fullName = firstName + lastName
+        conslole.log(fullName)
+
+        var myPoints = 3
+        // let incDec = document.getElementById("calc")
+        function add3points(){
+            let myPoints=0
+            let myaPoints = myPoints + 3
+            document.getElementById("calc").innerHTML = myaPoints
+        }
+
+        function remove1Points(){
+            let myPoints = myPoints - 1
+            incDec.innerHTML = myPoints
+        }
+        
+    }
+    </script>
+</body>
+</html>

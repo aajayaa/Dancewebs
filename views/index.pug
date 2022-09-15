@@ -1,0 +1,63 @@
+doctype html
+head 
+    title #{title}
+    style 
+        include ../static/style.css 
+    body 
+        navbar#navbar 
+            div#nav 
+                div#logo
+                    img(src="/static/img/logo.png", alt="logo")
+                    | RDA
+                ul
+                    li #[a#active(href="/") Home]
+                    li #[a(href="/") About]
+                    li #[a(href="/contact") Contact]
+                    li #[a(href="/") Class Info]
+                    li #[a(href="/") Services]
+        
+        section#introsection
+            div Welcome to my dance website 
+            div.small Dance Everyday 
+
+        section#Ourmission-section 
+            h3#section-head Our Mission
+            div#cards-container
+                div.card-box
+                    h3 Dance Perfection 
+                    div.group-content
+                        div.card-img 
+                            img(src="/static/img/1.png")     
+                        div.card-text
+                                p This is the best dance academy of the universe
+                
+                div.card-box
+                    h3 Dance the way you like
+                    div.group-content
+                        div.card-img
+                            img(src="/static/img/2.png")
+                        div.card-text
+                            p This is the best dance academy of the universe
+                
+                div.card-box
+                    h3 Expert Teaching
+                    div.group-content
+                        div.card-img#extra
+                            img(src="/static/img/3.png")
+                        div.card-text
+                            p This is the best dance academy of the universe
+
+        section#sponsersection 
+            h3#sponser-text Our Sponsers
+            div#sponser-list 
+                img(src= "/static/img/apple.png")
+                img(src= "/static/img/microsoft.png")
+                img(src= "/static/img/fb.png")
+                img(src= "/static/img/skype.png")
+
+
+        footer#footer
+            | Copyright © 2019 RahulAcademy.com | All Rights Reserved
+        script 
+            include ../static/script.js
+    

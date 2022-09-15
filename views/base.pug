@@ -1,0 +1,33 @@
+doctype html 
+html 
+    head 
+        title  #{title}
+        block scripts 
+            include ../static/script.js
+
+        block style
+            style
+                include ../static/style.css
+    body 
+        navbar#navbar 
+            div#nav 
+                div#logo
+                    img(src="/static/img/logo.png", alt="logo")
+                    | RDA
+                div#hamburger
+                    button(onclick='nav()') X&lt;
+                    ul#menu
+                        li #[a#active(href="/") Home]
+                        li #[a(href="/") About]
+                        li #[a(href="/contact") Contact]
+                        li #[a(href="/") Class Info]
+                        li #[a(href="/") Services]
+                //- div#ham 
+                //-     h1 #[a(href="/") X]
+                        
+                        
+
+        block content 
+            
+        footer#footer
+            | Copyright © 2019 RahulAcademy.com | All Rights Reserved
